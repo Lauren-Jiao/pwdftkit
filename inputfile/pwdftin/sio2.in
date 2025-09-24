@@ -1,0 +1,102 @@
+#H2O
+Ion_Move:              verlet
+#Ion_Move:              nosehoover1
+MD_Time_Step:          40
+Ion_Max_Iter:          3
+
+Ion_Temperature:       300
+#MD_Extrapolation_Type: xlbomd
+MD_Extrapolation_Type: linear
+#MD_Extrapolation_Type: aspc2
+#MD_Extrapolation_Type: aspc3
+MD_Extrapolation_Variable: wavefun
+#kappa_XLBOMD:          2.0
+
+MD_SCF_Outer_MaxIter:  999
+MD_SCF_Phi_MaxIter:    999
+
+Output_Position:       1
+Output_Velocity:       1
+#Restart_Position:      1
+#Restart_Velocity:      1
+
+Mixing_Variable:       potential
+Mixing_Type:           anderson
+Mixing_MaxDim:         8
+Mixing_StepLength:     0.7
+
+Output_Position:       1
+Output_Velocity:       1
+Restart_Position:      0
+Restart_Velocity:      0
+
+AIMD_DIPOLE:           1
+
+#Temperature:           300.0
+#Smearing_Scheme:          FD
+#Extra_Electron:           0.0
+Calculate_Force_Each_SCF: 0
+
+Temperature:           0
+SCF_Outer_MaxIter:     999
+SCF_Outer_Tolerance:   1e-4
+SCF_Phi_MaxIter:       499
+SCF_Phi_Tolerance:     1e-6
+Eig_MaxIter: 	         3
+Eig_Tolerance:         1e-20
+
+PeriodTable:           HGH_Si_O.bin
+Pseudo_Type:           HGH
+
+#XC_Type:               XC_HYB_GGA_XC_HSE06
+XC_Type:               XC_GGA_XC_PBE
+#Hybrid_Mixing_Type:    nested
+#Hybrid_Mixing_Type:    pcdiis  
+#Hybrid_ACE:            1
+
+PW_Solver:             PPCG
+#PPCG_sbSize:           128
+#ScaLAPACK_Block_Size:  32
+
+Ecut_Wavefunction:     15
+
+begin Super_Cell
+  13.883348295672963  13.883348295672963  13.883348295672963
+end Super_Cell
+
+Atom_Types_Num:        2
+
+Atom_Type:             14
+
+begin Atom_Red
+  -0.0000000000000000   0.0000000000000000   0.0000000000000000  
+  -0.0000000000000000   0.5000000000000000   0.5000000000000000 
+   0.5000000000000000   0.5000000000000000   0.0000000000000000  
+   0.5000000000000000   0.0000000000000000   0.5000000000000000  
+   0.7500000000000000   0.2500000000000000   0.7500000000000000  
+   0.2500000000000000   0.2500000000000000   0.2500000000000000  
+   0.2500000000000000   0.7500000000000000   0.7500000000000000  
+   0.7500000000000000   0.7500000000000000   0.2500000000000000   
+end Atom_Red
+
+
+Atom_Type:             8
+
+begin Atom_Red
+   0.1250100000000000   0.1250000000000000   0.1250000000000000
+   0.8750100000000000   0.3750000000000000   0.6250000000000000
+   0.3750100000000000   0.6250000000000000   0.8750000000000000
+   0.6250100000000000   0.8750000000000000   0.3750000000000000
+   0.3750100000000000   0.8750000000000000   0.6250000000000000
+   0.8750100000000000   0.6250000000000000   0.3750000000000000
+   0.6250100000000000   0.3750000000000000   0.8750000000000000
+   0.1250100000000000   0.6250000000000000   0.6250000000000000
+   0.8750100000000000   0.8750000000000000   0.1250000000000000
+   0.3750100000000000   0.1250000000000000   0.3750000000000000
+   0.3750100000000000   0.3750000000000000   0.1250000000000000
+   0.8750100000000000   0.1250000000000000   0.8750000000000000
+   0.6250100000000000   0.1250000000000000   0.6250000000000000
+   0.1250100000000000   0.8750000000000000   0.8750000000000000
+   0.1250100000000000   0.3750000000000000   0.3750000000000000
+   0.6250100000000000   0.6250000000000000   0.1250000000000000
+end Atom_Red

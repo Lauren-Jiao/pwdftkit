@@ -1,0 +1,80 @@
+# Groud State
+Mixing_Variable:       potential
+Mixing_Type:           broyden
+Mixing_MaxDim:         8
+Mixing_StepLength:     0.7
+#Temperature:           300.0
+#Smearing_Scheme:          FD
+#Extra_Electron:           0.0
+Calculate_Force_Each_SCF: 0
+Temperature:           0
+SCF_Outer_MaxIter:     999
+SCF_Outer_Tolerance:   1e-5
+SCF_Phi_MaxIter:       499
+SCF_Phi_Tolerance:     1e-7
+SCF_Inner_MaxIter:     5
+SCF_Inner_Tolerance:   1e-6
+Eig_MaxIter:           5
+Eig_Tolerance:         1e-13
+XC_Type:               XC_GGA_XC_PBE
+PW_Solver:             PPCG
+Ecut_Wavefunction:     15
+FFT_Number_Type:       even
+Output_Density:        0
+Restart_Density:       0
+#VDW_Type:              DFT-D2
+
+# Hybrid Functional
+Mixing_Variable:       potential
+Mixing_Type:           broyden
+Mixing_MaxDim:         8
+Mixing_StepLength:     0.7
+#Temperature:           300.0
+#Smearing_Scheme:          FD
+#Extra_Electron:           0.0
+Calculate_Force_Each_SCF: 0
+Temperature:           0
+SCF_Outer_MaxIter:     999
+SCF_Outer_Tolerance:   1e-5
+SCF_Phi_MaxIter:       499
+SCF_Phi_Tolerance:     1e-7
+SCF_Inner_MaxIter:     5
+SCF_Inner_Tolerance:   1e-6
+Eig_MaxIter:           5
+Eig_Tolerance:         1e-13
+PW_Solver:             PPCG
+Ecut_Wavefunction:     15
+FFT_Number_Type:       even
+Output_Density:        0
+Restart_Density:       0
+#VDW_Type:              DFT-D2
+XC_Type:               XC_HYB_GGA_XC_HSE06
+Hybrid_ACE:            1
+#Hybrid_Mixing_Type:    nested
+#Hybrid_DF:             1
+#Hybrid_DF_Num_Mu:      7.0
+#Hybrid_DF_Num_GaussianRandom:      2.0
+#Hybrid_DF_Tolerance:   1e-20
+
+# Molecular Dynamics
+Ion_Move:              verlet
+MD_Time_Step:          40
+Ion_Max_Iter:          1100
+Ion_Temperature:       300
+MD_Extrapolation_Type: linear
+MD_Extrapolation_Variable: wavefun
+MD_SCF_Outer_MaxIter:  999
+MD_SCF_Phi_MaxIter:    499
+
+# Psedopotential
+# ONCV
+Pseudo_Type:           ONCV
+Use_VLocal:            1
+Use_Atom_Density:      1
+UPF_File:
+  -  H_ONCV_PBE-1.0.upf
+  -  O_ONCV_PBE-1.0.upf
+# HGH
+# PeriodTable:           HGH_Si_O.bin
+# Pseudo_Type:           HGH
+
