@@ -13,4 +13,5 @@ Do
     
     4. source ~/.bashrc
 
+For example, generate the pwdft input_file from a vasp input file (POSCAR or .vasp), run pwdftkit and input"1.1.1"
   
