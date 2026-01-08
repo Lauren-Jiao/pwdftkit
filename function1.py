@@ -187,7 +187,7 @@ def generate_config_yaml(vasp_data, params):
     # Create Atom_Red list based on coordinates
     atom_red = []
     for coord in coordinates:
-        atom_red.append(f"  [  {coord[0]:.6f}  {coord[1]:.6f}  {coord[2]:.6f}  ]")
+        atom_red.append(f"  [  {coord[0]:.6f} ,  {coord[1]:.6f},  {coord[2]:.6f}  ]")
     
     # Check if pseudopotential_params is already included in params
     if "# Pseudopotential" in params:
