@@ -237,7 +237,7 @@ def generate_config_yaml(vasp_data, params):
         config_content += f"Atom_Type      : [  {',  '.join(map(str, atom_types))}  ]\n"
         
         # Add Super_Cell in new format
-        config_content += f"Super_Cell     : [  {super_cell[0]:.6f},  {super_cell[1]:.6f},  {super_cell[2]:.6f}  ]\n"
+        config_content += f"Super_Cell     : [  {super_cell[0]:.6f} ,  {super_cell[1]:.6f} ,  {super_cell[2]:.6f}  ]\n"
         
         # Add Atom_Num in new format
         config_content += f"Atom_Num       : [  {', '.join(map(str, atom_number))}  ]\n"
